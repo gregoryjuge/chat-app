@@ -9,25 +9,17 @@ const statusOnline = true;
 
 const gestionOnline = () => {
     return (
+      <div className = "Contact">
+      <img className="avatar" src= {avatar} alt= "avatar"/>
+      
+
         <div className = "status" >
+        <div><h4>{name}</h4></div>
            <div className = {statusOnline ? "status-online" : "status-offline"}></div>
            {statusOnline ? "Online" : "Offline"}
+           
         </div>   
-    );
+   </div> );
 }
 
-function element () {
-   return (
-
-    <div className = "contact">
-       <img className="avatar" src= {avatar} alt= "avatar"/>
-       <div><h4>{name}</h4>
-       {gestionOnline()}</div>
-
-    </div>
-        
-
-  );
-}
-
-export default element;
+export default gestionOnline;
